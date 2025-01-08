@@ -1,3 +1,3 @@
 #WDD131 Portfolio
 
-Pages-url:(https://gagedorl.github.io/wdd131/)
+Pages-url: https://gagedorl.github.io/wdd131/

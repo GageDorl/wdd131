@@ -23,9 +23,10 @@ listTitle.textContent = 'Ingredient List';
 document.body.append(listTitle);
 
 const newList = document.createElement('ul');
-for(let i = 0; i<ingredientData.length; i++){
+ingredientData.forEach((item,i)=>{
     let listElement = document.createElement('li');
     listElement.textContent = `${portionData[i]} ${ingredientData[i]}`;
     newList.append(listElement); 
-}
+})
+
 document.body.append(newList);

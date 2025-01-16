@@ -14,3 +14,18 @@ document.body.appendChild(newDiv);
 const newSection = document.createElement('section');
 newSection.innerHTML = '<h2>DOM Basics</h2><p>This was added through JavaScript</p>';
 document.body.appendChild(newSection);
+
+const ingredientData = ['Pinto Beans','Corn','Spiders','Tortillas'];
+const portionData = ['1 15oz can','1 15oz can',' 1 Tbsp','8'];
+
+const listTitle = document.createElement('h2');
+listTitle.textContent = 'Ingredient List';
+document.body.append(listTitle);
+
+const newList = document.createElement('ul');
+for(let i = 0; i<ingredientData.length; i++){
+    let listElement = document.createElement('li');
+    listElement.textContent = `${portionData[i]} ${ingredientData[i]}`;
+    newList.append(listElement); 
+}
+document.body.append(newList);

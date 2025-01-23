@@ -22,11 +22,14 @@ function renderTasks(tasks){
 }
 
 function newTask(){
-    const newTask = document.getElementById('todo').value;
+    let newTask = document.getElementById('todo');
+
     tasks.push({
-        detail: newTask,
+        detail: newTask.value,
         completed: false
     });
+
+    newTask.value = '';
     renderTasks(tasks);
 }
 

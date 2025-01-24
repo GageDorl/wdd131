@@ -116,6 +116,8 @@ nav{
     grid-row:2;
     grid-column: 2;
     padding:10px;
+    max-height: 90vh;
+    margin:0 auto;
 }
 
 @media screen and (min-width:700px){

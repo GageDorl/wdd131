@@ -11,6 +11,8 @@ window.addEventListener('resize', handleResize);
 function handleResize() {
     if(window.innerWidth>1000){
         nav.classList.remove('hidden');
+    } else if(window.innerWidth<=1000){
+        nav.classList.add('hidden');
     }
 }
 

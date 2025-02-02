@@ -1,0 +1,134 @@
+:root{
+    --primary-color: #fbf7e2;
+    --secondary-color: #B73434;
+    --tertiary-color: #f1e595;
+    --quaternary-color: #f9efa9;
+    --main-text-color: #422;
+    --link-color: #FEFE81;
+}
+
+body{
+    margin:0;
+    padding: 0;
+    background-color: var(--primary-color);
+    color: var(--main-text-color);
+    font-family: 'Tahoma', sans-serif;
+}
+
+.bookInfo{
+    text-align: right;
+    margin: 10px;
+    padding-right: 30px;
+    border-right:solid 2px var(--main-text-color);
+}
+
+.bookOverview{
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+.bookSection{
+    background-color: var(--quaternary-color);
+    display:grid;
+    grid-template-columns: auto 800px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin:20px;
+    grid-column: 1;
+}
+
+.description a{
+    color: var(--secondary-color);
+}
+
+.filterBooks{
+    grid-column:2;
+    grid-row:1;
+}
+
+#filterForm{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin: 10px;
+    background-color: var(--tertiary-color);
+    padding: 50px 20px;
+    column-gap: 20px; /* Use column-gap for horizontal gap */
+    row-gap: 10px; /* Use row-gap for vertical gap */
+    border-radius: 20px;
+    align-items: center;
+    text-align: right;
+}
+
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3em;
+    padding: 20px;
+}
+
+h2.title{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+    color: var(--secondary-color);
+}
+
+header{
+    text-align: center;
+}
+
+label{
+    font-size: 1.5em;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+}
+
+nav{
+    background-color: var(--secondary-color);
+    padding: 15px;
+}
+
+nav a {
+    margin: 0 10px;
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav ul{
+    list-style-type: none;
+    display:grid;
+    grid-auto-flow: column;
+    max-width: 300px;
+    justify-self: end;
+    gap:20px;
+}
+
+select{
+    font-size: 1.5em;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.skiptocontent a{
+    display: block;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: var(--secondary-color);
+    color: var(--link-color);
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.skiptocontent a:focus{
+    top: 0;
+}

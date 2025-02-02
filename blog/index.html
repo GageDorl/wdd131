@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Review Blog</title>
+    <link rel="stylesheet" href="blog.css">
+    <script src="blog.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="skiptocontent">
+            <a href="#maincontent">skip to main content</a>
+        </div>
+        <h1>Kids Read for Fun</h1>
+        <nav>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Archive</a></li>
+                <li><a href="#">Search</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="mainContent">
+        
+        <section class="filterBooks">
+            <form id="filterForm">
+                <label for="sort">Sort:</label>
+                <select name="sort" id="sort">
+                    <option value="age">Age</option>
+                    <option value="genre">Genre</option>
+                    <option value="rating">Rating</option>
+                </select>
+                <label for="age">Age: </label>
+                <select name="age" id="age">
+                    <option value="0-5">0-5</option>
+                    <option value="6-9">6-9</option>
+                    <option value="10-14">10-14</option>
+                    <option value="15-18">15-18</option>
+                </select>
+                <label for="genre">Genre: </label>
+                <select name="genre" id="genre">
+                    <option value="fantasy">Fantasy</option>
+                    <option value="mystery">Mystery</option>
+                    <option value="scifi">Science Fiction</option>
+                    <option value="nonfiction">Non-Fiction</option>
+                </select>
+                <label for="rating">Rating: </label>
+                <select name="rating" id="rating">
+                    <option value="1">1 Star</option>
+                    <option value="2">2 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="5">5 Stars</option>
+                </select>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

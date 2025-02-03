@@ -6,11 +6,24 @@ function validateForm(event) {
     // the default behavior for a form submit is to try and navigate to another page where the form would be processed, if a url is not provided it will reload the current page. This sometimes is not desirable behavior. One case when we might do this is if we think there is bad data in the form.
     // To keep it from happening we can can call e.preventDefault()
     // You should always give feedback to the user about what whet wrong so they can fix it. We will store the error messages here
-    const errors = ['Password is required', 'Email is required', 'Address is required', 'Payment Method is required', 'Credit Card is required', 'Paypal Username is required'];
+    const errors = [];
     // start by assuming the form is valid.
     let isValid = true;
     // add our validations here
-  
+
+    const name = document.querySelector('#name');
+    const paymentMethod = document.querySelector('#payment');
+    const credit = document.querySelector('#credit');
+
+    if(name.value!='Bob'){
+        isValid = false;
+        errors.push('Name must be Bob')
+    }
+    if(paymentMethod.value=='credit'&&credit.value!='1234123412341234'){
+        isValid = false;
+        errors.push('Credit card must be 1234123412341234')
+    }
+
     // if we ran into any problems above valid will be false.
     if (!isValid) {
       //stop the form from being submitted

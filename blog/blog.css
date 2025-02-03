@@ -122,13 +122,14 @@ select{
     position: absolute;
     top: -40px;
     left: 0;
+    
+}
+
+.skiptocontent a:focus{
+    top: 0;
     background-color: var(--secondary-color);
     color: var(--link-color);
     padding: 5px;
     border-radius: 5px;
     text-decoration: none;
-}
-
-.skiptocontent a:focus{
-    top: 0;
 }

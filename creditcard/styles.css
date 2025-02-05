@@ -5,17 +5,27 @@ body{
 
 form{
     display:grid;
-    /* grid-template-columns: 75px 100px 75px;
-    grid-template-rows: 50px 100px 50px; */
     gap: 20px;
     justify-content: center;
+    grid-template-columns: 100px auto;
+    grid-template-rows: 30px 200px auto;
+    font-size: .9em;
+}
+
+#blackBar{
+    background-color: black;
+    grid-column: 1/4;
+    align-self: start;
+    height: 30px;
+    padding-left: 10px;
+    width: 100%;
 }
 
 .card{
     background-color: lightgrey;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px darkgrey;
-    max-width: 300px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    width: 300px;
     aspect-ratio: 1.5;
     display: grid;
     padding: 10px;
@@ -24,32 +34,82 @@ form{
 
 .card-image{
     grid-column: 2;
+    justify-self: right;
 }
 
 #cardFront{
     grid-column: 1/3;
     grid-row: 1/3;
     z-index: 2;
-    grid-template-columns: 190px 90px;
+    grid-template-columns: 170px 100px;
+    gap:0 10px;
+    align-items: center;
 }
 
 #cardBack{
     grid-column: 2/4;
     grid-row: 2/4;
     z-index: 1;
-    padding-left: 150px;
+    grid-template-columns: 200px 70px;
+    grid-template-rows: 50% 30%;
+    align-items: end;
 }
 
-#cardNumber{
+#cardNumberDiv{
     grid-column: 1/3;
+}
+
+#cardCVCDiv{
+    grid-column: 2/3;
+    grid-row:2/3;
+}
+
+#cardMonth, #cardYear{
+    width: 42px;
+}
+
+#cardExpirationDiv{
+    padding:0;
+    border: 0;
+    margin:0;
+    display:inline-block;
+    align-self: center;
+}
+
+.error{
+    text-align: center;
+    color: red;
 }
 
 h1{
     display:inline;
 }
 
+.hidden{
+    display: none;
+}
+
+input{
+    width: 100%;
+    box-sizing: border-box;
+    
+}
+
+label{
+    display: inline;
+    
+}
+
 #submitCardInfo{
     grid-column: 3;
-    grid-row: 5;
+    grid-row: 3;
     z-index: 2;
+    width: 100px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#submitCardInfo:active{
+    background-color: lightgrey;
 }

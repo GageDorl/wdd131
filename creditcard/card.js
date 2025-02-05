@@ -3,11 +3,6 @@ document.querySelector('form').addEventListener('submit', submitHandler);
 function submitHandler(e){
     e.preventDefault();
     let errorMsg ='';
-    const cardDate = new Date(this.cardYear.value, this.cardMonth.value);
-    const currentDate = new Date();
-    console.log(cardDate);
-    console.log(currentDate);
-    console.log(this.cardNumber.value);
     displayError('');
     if(isNaN(this.cardNumber.value)){
         errorMsg += 'Card number is not a valid number\n';
@@ -16,7 +11,7 @@ function submitHandler(e){
     }
 
     
-    if(cardDate < currentDate){
+    if(isCardExpired(this.cardYear.value, this.cardMonth.value)){
         errorMsg += 'Card is expired\n';
     }
 
@@ -29,6 +24,13 @@ function submitHandler(e){
 
 function isCardNumberValid(cardNumber){
     return cardNumber === '1234123412341234';
+}
+
+function isCardExpired(cardYear, cardMonth){
+    cardYear = 2001 + parseInt(cardYear);
+    const cardDate = new Date(Date.parse(cardYear, cardMonth));
+    const currentDate = new Date();
+    return cardDate < currentDate;
 }
 
 function displayError(errorMsg){

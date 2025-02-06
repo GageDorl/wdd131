@@ -10,7 +10,6 @@ function submitHandler(e){
         errorMsg += 'Card number is not a valid card number\n';
     }
 
-    
     if(isCardExpired(this.cardYear.value, this.cardMonth.value)){
         errorMsg += 'Card is expired\n';
     }

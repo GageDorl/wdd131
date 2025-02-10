@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+:root {
+  /* change the values below to your colors from your palette */
+  --primary-color: #fff5e2;
+  --secondary-color: #f27329;
+  --accent1-color: #8bdfe9;
+  --accent2-color: #061940;
+  --accent3-color: #a82114;
+
+  /* change the values below to your chosen font(s) */
+  --heading-font: Teko, sans-serif;
+  --paragraph-font: Nunito, Helvetica, sans-serif;
+  --headline-color-on-white: var(
+    --accent2-color
+  ); /* headlines on a white background */
+  --headline-color-on-color: var(--accent1-color); /* headlines on a colored background */
+  --paragraph-color-on-white: var(
+    --accent2-color
+  ); /* paragraph text on a white background */
+  --paragraph-color-on-color: var(--primary-color); /* paragraph text on a colored background */
+  --paragraph-background-color: var(--accent3-color);
+  --nav-link-color: var(--primary-color);
+  --nav-background-color: var(--secondary-color);
+  --nav-hover-link-color: var(--accent1-color);
+  --nav-hover-background-color: var(--accent3-color);
+}
+
+body{
+    font-family: var(--paragraph-font);
+    background-color: var(--primary-color);
+    color: var(--paragraph-color-on-white);
+    margin:0;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--heading-font);
+}
+
+header{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#left-block a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--primary-color)
+}
+
+#left-block h1{
+    font-size: 2em; 
+    margin: 0;
+    padding: 0;
+    display: inline;
+    line-height: .5em;
+}
+
+#logo{
+    display: inline;
+    margin: 0 auto;
+    width:80px;
+}
+
+main{
+    text-align: center;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    gap:20px;
+}

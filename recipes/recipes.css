@@ -83,6 +83,12 @@ main{
     box-sizing: border-box;
 }
 
+.recipe-tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
 .recipe-title{
     font-size: 2em;
     margin: 10px 0 0 0;

@@ -279,3 +279,58 @@ const recipes = [
 		rating: 4
 	}
 ]
+
+const randomRecipeIndex = recipes => Math.floor(Math.random() * recipes.length);
+
+const randomRecipe = recipes => recipes[randomRecipeIndex(recipes)];
+
+const recipeTemplate = recipe => {
+    return `<section class="recipe">
+            <img src="${recipe.image}" alt="recipe image" class="recipe-image">
+            <section class="recipe-info">
+                <section class="recipe-tags">
+                    ${tagsTemplate(recipe.tags)}
+                </section>
+                <h2 class="recipe-title">${recipe.name}</h2>
+                <span class="rating" role="img" aria-label="Rating: ${recipe.rating} out of 5 stars">
+                    ${ratingTemplate(recipe.rating)}
+                </span>
+                <p class="recipe-description">${recipe.description}</p>
+            </section>
+        </section>`
+}
+
+const tagsTemplate =  tags => {
+    let html = '';
+    tags.forEach(tag => {
+        html += `<span class="tag">${tag}</span>`
+    });
+    return html;
+};
+
+const ratingTemplate = rating => {
+    let html = '';
+    for (let i = 0; i < 5; i++) {
+        if (i < rating) {
+            html += '<span aria-hidden="true" class="icon-star">⭐</span>';
+        } else {
+            html += '<span aria-hidden="true" class="icon-star-empty">☆</span>';
+        }
+    }
+    return html;
+}
+
+const renderRecipes = recipeList => {
+    const main = document.querySelector('main');
+    main.innerHTML = '';
+    for(let recipe of recipeList){
+        main.innerHTML += recipeTemplate(recipe);
+    }
+}
+
+const init = () => {
+    const recipe = randomRecipe(recipes);
+    renderRecipes([recipe]);
+}
+
+init();

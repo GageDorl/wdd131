@@ -334,3 +334,32 @@ const init = () => {
 }
 
 init();
+
+const search = document.querySelector('#search');
+const button = document.querySelector('#searchButton');
+
+const filterRecipes = searchTerm => {
+	const filteredRecipes = recipes.filter(recipe => {
+		if (recipe.name.toLowerCase().includes(searchTerm)) {
+			return true;
+		} else if (recipe.tags.some(tag => tag.toLowerCase().includes(searchTerm))) {
+			return true;
+		} else  if (recipe.description.toLowerCase().includes(searchTerm)) {
+			return true;
+		} else if (recipe.recipeIngredient.some(ingredient => ingredient.toLowerCase().includes(searchTerm))) {
+			return true;
+		}
+		else{
+			return false;
+		}
+	});
+	filteredRecipes.sort((a, b) => a.name.localeCompare(b.name));
+	renderRecipes(filteredRecipes);
+}
+
+const searchHandler = () =>{
+	const searchTerm = search.value.toLowerCase();
+	filterRecipes(searchTerm);
+}
+
+button.addEventListener('click', searchHandler);

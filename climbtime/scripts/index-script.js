@@ -59,3 +59,96 @@ nextButton.addEventListener("click", () => {
     index = (index + 1) % climbingHistory.length;
     renderFact(index);
 });
+
+const quiz = [
+    {
+        question: "What does the term “crux” refer to in rock climbing?",
+        answers: [
+            { answer: "The easiest part of the route", correct: false },
+            { answer: "The hardest part of the route", correct: true },
+            { answer: "The resting point on a climb", correct: false },
+            { answer: "A type of climbing hold", correct: false }
+        ]
+    },
+    {
+        question: "Which famous climbing area is known for its big wall routes like El Capitan?",
+        answers: [
+            { answer: "Joshua Tree", correct: false },
+            { answer: "Red River Gorge", correct: false },
+            { answer: "Yosemite National Park", correct: true },
+            { answer: "Fontainebleau", correct: false }
+        ]
+    },
+    {
+        question: "What is a “dyno” in climbing?",
+        answers: [
+            { answer: "A static balance move", correct: false },
+            { answer: "A jump from one hold to another", correct: true },
+            { answer: "A slow and controlled traverse", correct: false },
+            { answer: "A climbing knot", correct: false }
+        ]
+    },
+    {
+        question: "In climbing terms, what is a “flash”?",
+        answers: [
+            { answer: "Climbing a route in complete darkness", correct: false },
+            { answer: "Completing a route on the first try without falling, after getting some beta", correct: true },
+            { answer: "Using only flashing holds on a problem", correct: false },
+            { answer: "Falling off a climb due to poor footwork", correct: false }
+        ]
+    },
+    {
+        question: "What does “pumped” mean in climbing?",
+        answers: [
+            { answer: "Extremely excited after sending a route", correct: false },
+            { answer: "When a climber's forearms are fatigued and swollen", correct: true },
+            { answer: "Climbing with too much force", correct: false },
+            { answer: "A method of securing climbing gear", correct: false }
+        ]
+    },
+    {
+        question: "Where is the world-famous bouldering destination Fontainebleau located?",
+        answers: [
+            { answer: "France", correct: true },
+            { answer: "Italy", correct: false },
+            { answer: "Switzerland", correct: false },
+            { answer: "Spain", correct: false }
+        ]
+    },
+    {
+        question: "What is the name of the V-scale used to grade bouldering problems?",
+        answers: [
+            { answer: "Yosemite Decimal System", correct: false },
+            { answer: "Font Scale", correct: false },
+            { answer: "Hueco Scale", correct: true },
+            { answer: "Alpine Scale", correct: false }
+        ]
+    },
+    {
+        question: "What type of crash pad is most commonly used for bouldering?",
+        answers: [
+            { answer: "Air-filled pad", correct: false },
+            { answer: "Thick foam pad", correct: true },
+            { answer: "Inflatable mattress", correct: false },
+            { answer: "Rubberized mat", correct: false }
+        ]
+    },
+    {
+        question: "What is the main difference between bouldering and sport climbing?",
+        answers: [
+            { answer: "Bouldering is done on artificial walls only", correct: false },
+            { answer: "Sport climbing required rope and harnesses, while bouldering is done on short climbs with crash pads", correct: true },
+            { answer: "Bouldering is only done indoors", correct: false },
+            { answer: "Sport climbing has more dangerous falls than bouldering", correct: false }
+        ]
+    },
+    {
+        question: "Who is widely credited with treating bouldering as a separate sport and introducing a grading system for it?",
+        answers: [
+            { answer: "Lynn Hill", correct: false },
+            { answer: "Chris Sharma", correct: false },
+            { answer: "John Gill", correct: true },
+            { answer: "Tommmy Caldwell", correct: false }
+        ]
+    }
+];

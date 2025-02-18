@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+body {
+    background-color: #f0f8ff; /* Alice Blue */
+    color: #333333; /* Dark Gray */
+    margin:0;
+    font-family: 'Nunito', Arial, sans-serif;
+}
+
+header {
+    background-color: #4682b4; /* Steel Blue */
+    color: #ffffff; /* White */
+    padding:20px;
+}
+
+main{
+    padding:20px;
+}
+
+nav {
+    background-color: #5f9ea0; /* Cadet Blue */
+    color: #ffffff; /* White */
+}
+
+footer {
+    background-color: #2f4f4f; /* Dark Slate Gray */
+    color: #ffffff; /* White */
+}
+
+a {
+    color: #ad2e00; /* Orange Red */
+}
+
+button {
+    background-color: #32cd32; /* Lime Green */
+    color: #ffffff; /* White */
+}

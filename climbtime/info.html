@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Climb Time</title>
     <link rel="stylesheet" href="styles/style.css">
-    <script src="scripts/info-script.js"></script>
+    <script src="scripts/info-script.js" defer></script>
 </head>
 <body>
     <header>
@@ -22,12 +22,12 @@
     </header>
     <main>
         <h1>Climbing Info</h1>
-        <select id="info" name="info">
+        <select id="info" name="info" aria-label="select climbing info">
             <option value="holds">Holds</option>
             <option value="equipment">Equipment</option>
-            <option value="lead-mistakes">Lead Mistakes</option>
+            <option value="leadMistakes">Lead Mistakes</option>
         </select>
-        <section id="info-content">
+        <section id="info-container">
         </section>
     </main>
 </body>

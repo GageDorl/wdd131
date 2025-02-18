@@ -42,6 +42,24 @@ body{
     margin:0;
 }
 
+.fact-card{
+    background-color: var(--accent3-color);
+    color: var(--accent1-color);
+    border-radius: 10px;
+    padding: 20px;
+    height:100%;
+    box-sizing: border-box;
+}
+
+.fact-card p{
+    margin:0;
+}
+
+.fact-title{
+    margin:0;
+    font-size: 1.3em;
+}
+
 h1, h2, h3, h4, h5, h6{
     font-family: var(--heading-font);
 }
@@ -83,6 +101,26 @@ header{
     border-radius: 5px;
     color: var(--accent1-color);
     padding: 10px;
+}
+
+#info{
+    background-color: var(--accent3-color);
+    color: var(--primary-color);
+    border:none;
+    font-size: 1.5em;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#info-container{
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 80%;
+    margin:10px auto;
+    margin-bottom: 20px;
 }
 
 #left-arrow, #right-arrow{
@@ -137,7 +175,7 @@ main{
     text-align: center;
 }
 
-.restart-button{
+.restart-button, #start-quiz{
     background-color: var(--accent1-color);
     color: var(--accent2-color);
     border-radius: 5px;
@@ -147,15 +185,6 @@ main{
     border: var(--accent1-color) 1px solid;
 }
 
-#start-quiz{
-    background-color: var(--accent1-color);
-    color: var(--accent2-color);
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-    cursor: pointer;
-    border: var(--accent1-color) 1px solid;
-}
 
 #start-quiz:hover{
     background-color: var(--accent3-color);
@@ -214,6 +243,12 @@ ul{
         grid-column: 2/4;
     }
 
+    #info-container{
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        max-width: 800px;
+    }
+
     #left-arrow, #right-arrow{
         grid-row: 1/2;
     }
@@ -222,7 +257,7 @@ ul{
         grid-column: 1/2;
     }
 
-    .restart-button{
+    .restart-button, #start-quiz{
         grid-column: 1/3;
     }
 

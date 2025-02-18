@@ -190,7 +190,7 @@ const quizFunction = () => {
                     quizContainer.innerHTML = "";
                     const scoreDisplay = document.createElement("h2");
                     scoreDisplay.textContent = `You got ${score} out of ${quizLength} questions correct! Wanna play again?`;
-
+                    scoreDisplay.classList.add("question");
                     const restartButton = document.createElement("button");
                     restartButton.textContent = "Restart Quiz";
                     restartButton.classList.add("restart-button");

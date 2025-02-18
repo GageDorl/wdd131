@@ -152,3 +152,59 @@ const quiz = [
         ]
     }
 ];
+
+const quizContainer = document.querySelector("#quiz");
+const startQuiz = document.querySelector("#start-quiz");
+
+const quizFunction = () => {
+    let score = 0;
+    let currentQuestion = 0;
+    const quizLength = quiz.length;
+
+    quiz.sort(() => Math.random() - 0.5);
+
+    const renderQuestion = (questionIndex) => {
+        quizContainer.innerHTML = "";
+        const question = document.createElement("h2");
+        question.classList.add("question");
+        question.textContent = quiz[questionIndex].question;
+        quizContainer.appendChild(question);
+
+        const answers = quiz[questionIndex].answers;
+
+        answers.sort(() => Math.random() - 0.5);
+
+        answers.forEach((answer, index) => {
+            const answerButton = document.createElement("button");
+            answerButton.classList.add("answer-button");
+            answerButton.setAttribute("aria-label", "Answer choice");
+            answerButton.textContent = answer.answer;
+            answerButton.addEventListener("click", () => {
+                if (answer.correct) {
+                    score++;
+                }
+                currentQuestion++;
+                if (currentQuestion < quizLength) {
+                    renderQuestion(currentQuestion);
+                } else {
+                    quizContainer.innerHTML = "";
+                    const scoreDisplay = document.createElement("h2");
+                    scoreDisplay.textContent = `You got ${score} out of ${quizLength} questions correct! Wanna play again?`;
+
+                    const restartButton = document.createElement("button");
+                    restartButton.textContent = "Restart Quiz";
+                    restartButton.classList.add("restart-button");
+                    restartButton.addEventListener("click", () => quizFunction());
+                    quizContainer.appendChild(scoreDisplay);
+                    quizContainer.appendChild(restartButton);
+
+                }
+            });
+            quizContainer.appendChild(answerButton);
+        });
+    };
+
+    renderQuestion(currentQuestion);
+}
+
+startQuiz.addEventListener("click", () => quizFunction());

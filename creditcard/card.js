@@ -26,8 +26,10 @@ function isCardNumberValid(cardNumber){
 }
 
 function isCardExpired(cardYear, cardMonth){
-    cardYear = 2001 + parseInt(cardYear);
-    const cardDate = new Date(Date.parse(cardYear, cardMonth));
+    cardYear = 2000 + parseInt(cardYear);
+    cardMonth = parseInt(cardMonth);
+    const cardDate = new Date(Date.parse(`${cardYear}, ${cardMonth+1}`));
+    cardDate.setDate(cardDate.getDate() - 1);
     const currentDate = new Date();
     return cardDate < currentDate;
 }

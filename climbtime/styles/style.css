@@ -40,9 +40,13 @@ body{
     background-color: var(--primary-color);
     color: var(--paragraph-color-on-white);
     margin:0;
+    font-size: 1.2em;
 }
 
 .fact-card{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: var(--accent3-color);
     color: var(--accent1-color);
     border-radius: 10px;
@@ -52,16 +56,24 @@ body{
 }
 
 .fact-card p{
+    font-size: 1.2em;
     margin:0;
+    line-height: 1.8em;
 }
 
 .fact-title{
     margin:0;
-    font-size: 1.3em;
+    font-size: 2em;
 }
 
 h1, h2, h3, h4, h5, h6{
     font-family: var(--heading-font);
+}
+
+h1{
+    font-size: 3em;
+    margin-top:20px;
+    margin-bottom: 0;
 }
 
 header{
@@ -77,12 +89,18 @@ header{
     display: grid;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 20px auto;
     width: 80%;
     gap: 20px;
     background: radial-gradient(var(--accent3-color) 20%, var(--secondary-color) 30%, rgba(0,0,0,0) 100%);
     padding: 20px;
     border-radius: 10px;
+}
+
+#history-fact{
+    padding:20px;
+    font-size: 1.2em;
+    line-height: 1.8em;
 }
 
 #history-image{
@@ -107,7 +125,7 @@ header{
     background-color: var(--accent3-color);
     color: var(--primary-color);
     border:none;
-    font-size: 1.5em;
+    font-size: 1.2em;
     padding: 10px;
     border-radius: 10px;
 }
@@ -220,7 +238,7 @@ ul{
     margin:auto;
     margin-bottom: 20px;
 }
-@media screen and (min-width: 600px){
+@media screen and (min-width: 740px){
 
     header{
         flex-direction: row;
@@ -230,7 +248,7 @@ ul{
 
     .history-carousel{
         grid-template-columns: 50px 1fr 1fr 50px;
-        max-width: 800px;
+        max-width: 1000px;
     }
 
     #history-image{
@@ -246,7 +264,7 @@ ul{
     #info-container{
         grid-template-columns: 1fr 1fr;
         gap: 20px;
-        max-width: 800px;
+        max-width: 1200px;
     }
 
     #left-arrow, #right-arrow{
@@ -272,6 +290,7 @@ ul{
     #quiz{
         grid-template-columns: 1fr 1fr;
         gap:20px;
+        max-width: 1200px;
     }
     
 }
